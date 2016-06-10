@@ -118,11 +118,11 @@ describe('01-strings-tasks', function() {
              'A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠' 
         ].forEach((val, index) => {
             assert.equal(
-                index,
                 tasks.getCardId(val),
+                index,
                 `Invalid id for card '${val}':`
             )
         });
-       
+
     });
 });
