@@ -158,7 +158,7 @@ function doRectanglesOverlap(rect1, rect2) {
  *
  */
 function isInsideCircle(circle, point) {
-    throw new Error('Not implemented');
+    return (Math.pow(point.x - circle.center.x, 2) + Math.pow(point.y - circle.center.y, 2)) < Math.pow(circle.radius, 2)
 }
 
 
@@ -200,7 +200,11 @@ function findFirstSingleChar(str) {
  *
  */
 function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
-    throw new Error('Not implemented');
+    var lower = Math.min(a, b);
+    var upper = Math.max(a, b);
+    var startingRange = isStartIncluded ? '[' : '(';
+    var endingRange = isEndIncluded ? ']' : ')';
+    return `${startingRange}${lower}, ${upper}${endingRange}`
 }
 
 
@@ -217,7 +221,7 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
-    throw new Error('Not implemented');
+    return str.split('').reduceRight((p, c) => p + c, '')
 }
 
 
@@ -234,7 +238,7 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-    throw new Error('Not implemented');
+    return num.toString().split('').reduceRight((p, c) => p + c, '')
 }
 
 
@@ -278,7 +282,7 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
-    throw new Error('Not implemented');
+    return num % 9
 }
 
 
